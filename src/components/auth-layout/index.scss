@@ -1,0 +1,20 @@
+.layout {
+  display: flex;
+  padding: 0 15px;
+
+  &__left {
+    margin-left: 280px;
+  }
+  &__right {
+    width: 700px;
+    padding: 60px 60px;
+  }
+  &__text {
+    margin-bottom: 20px;
+    color: rgb(32, 33, 36);
+    font-family: Oswald, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+}
