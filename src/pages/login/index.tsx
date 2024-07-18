@@ -6,13 +6,17 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import ButtonCom from "../../components/button";
 import "./index.scss";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/feature/userSlice";
 function Login() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleLogin = async (values) => {
     try {
-      await api.post("login", values);
+      const response = await api.post("login", values);
       toast.success("Đăng nhập thành công!!!");
       navigate("/home");
+      dispatch(login(response.data));
     } catch (error) {
       toast.error(error.response.data);
     }
@@ -30,9 +34,7 @@ function Login() {
             },
           ]}
         >
-          <InputNumber
-            controls={false}
-            type="number"
+          <Input
             className="login__input"
             placeholder="Nhập số điện thoại"
             maxLength={10}
