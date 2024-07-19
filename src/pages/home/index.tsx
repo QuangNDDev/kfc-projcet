@@ -1,5 +1,11 @@
+import CardList from "../../components/card-list";
+
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <CardList />
+    </div>
+  );
 }
 
 export default Home;

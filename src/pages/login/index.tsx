@@ -1,5 +1,4 @@
-import { Form, Input, InputNumber } from "antd";
-
+import { Form, Input } from "antd";
 import AuthLayout from "../../components/auth-layout";
 import api from "../../components/config/api";
 import { toast } from "react-toastify";
@@ -68,9 +67,7 @@ function Login() {
             <span>Hoặc tiếp tục với</span>
           </div>
           <ButtonCom login="loginfb">Đăng nhập bằng facebook</ButtonCom>
-
           <ButtonCom login="loginap">Đăng nhập bằng apple</ButtonCom>
-
           <ButtonCom login="logingg">Đăng nhập bằng apple</ButtonCom>
         </Form.Item>
         <div className="login__register">

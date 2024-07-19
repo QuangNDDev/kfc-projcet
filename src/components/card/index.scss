@@ -1,0 +1,69 @@
+.food-card {
+  width: calc(80% / 4);
+  box-shadow: 0 0 17px 6px rgba(0, 0, 0, 0.1);
+
+  &__image {
+    overflow: hidden;
+    padding: 5px;
+    img {
+      width: 100%;
+      transition: transform 1s ease; // Smooth transition
+    }
+    &:hover img {
+      transform: scale(1.1); // Scale up the image on hover
+    }
+  }
+  &__wrapper {
+    padding: 0 15px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    .name {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: Roboto, sans-serif;
+      line-height: 20px;
+    }
+    .price {
+      font-weight: 700;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: Roboto, sans-serif;
+      line-height: 20px;
+    }
+  }
+  &__description {
+    color: rgb(107, 110, 121);
+    line-height: 20px;
+    font-size: 15px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 10px 0;
+    height: 80px;
+  }
+  &__btn {
+    .button {
+      display: block;
+      margin: auto;
+      padding: 15px 2px;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 25px;
+      margin-bottom: 20px;
+      background-color: #ccc;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      border: 1px solid rgb(204, 204, 204);
+      transition: background-color 1s ease, box-shadow 0.2s ease;
+
+      &:active {
+        background-color: #999; // Darker background color when active
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Box shadow on active
+      }
+    }
+  }
+}
